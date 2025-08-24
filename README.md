@@ -5,9 +5,6 @@
 
 ---
 
-
----
-
 ## 核心模块
 
 ### 1. `loading.js`
@@ -38,14 +35,31 @@
   - 调用 `loading.in()` 播放进入动画  
   - 执行注册在 `inEnd` 的回调函数
 
-#### 回调方法应用
-- **注册回调**
+#### 回调接口示例
+
 ```javascript
+// 注册回调
 loadingManager.onOutEnd(() => {
-    console.log("页面退出动画完成");
+  console.log("退出动画完成，执行额外逻辑");
 });
 loadingManager.onInEnd(() => {
-    console.log("页面进入动画完成");
+  console.log("进入动画完成，执行额外逻辑");
 });
 
+// 注销回调
+loadingManager.offOutEnd(callbackFunction);
+loadingManager.offInEnd(callbackFunction);
 
+#### 引入模块
+<script type="module">
+import { loadingManager } from "./loadingManager.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadingManager.init();
+});
+</script>
+#### 页面跳转
+<p class="page-link" data-url="./page2.html"></p>
+###可选回调
+loadingManager.onOutEnd(() => { /* 退出动画完成逻辑 */ });
+loadingManager.onInEnd(() => { /* 进入动画完成逻辑 */ });
