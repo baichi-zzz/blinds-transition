@@ -69,5 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 loadingManager.onOutEnd(() => { /* 退出动画完成逻辑 */ });
 loadingManager.onInEnd(() => { /* 进入动画完成逻辑 */ });
 ```
-####演示
+#### 演示
+
 ![百叶窗动画示意](./animation.gif)
