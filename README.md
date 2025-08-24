@@ -49,8 +49,9 @@ loadingManager.onInEnd(() => {
 // 注销回调
 loadingManager.offOutEnd(callbackFunction);
 loadingManager.offInEnd(callbackFunction);
-
+```
 #### 引入模块
+```
 <script type="module">
 import { loadingManager } from "./loadingManager.js";
 
@@ -58,8 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
     loadingManager.init();
 });
 </script>
+```
 #### 页面跳转
+```
 <p class="page-link" data-url="./page2.html"></p>
-###可选回调
+```
+#### 可选回调
+```
 loadingManager.onOutEnd(() => { /* 退出动画完成逻辑 */ });
 loadingManager.onInEnd(() => { /* 进入动画完成逻辑 */ });
+```
