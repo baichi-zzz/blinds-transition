@@ -1,0 +1,53 @@
+/* 转场部分 */
+
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  pointer-events: none;
+  z-index: 100000000;
+}
+.block {
+  flex: 1;
+  height: 100%;
+  background-color: #222;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.logo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  background-color: #222;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 100000000;
+  opacity: 1;
+}
+
+.logo-container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+@media (min-width: 1440px) {
+  .logo-container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+}
